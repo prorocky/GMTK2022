@@ -2623,7 +2623,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f20449e4cabdb46b2b231bc082d26d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floorSpawner: {fileID: 0}
   playerLayer:
     serializedVersion: 2
     m_Bits: 0
@@ -2639,7 +2638,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef6d308a7eb99d246acec2f03e2f547e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floorTile: {fileID: 5308674710155615122, guid: 392635b51de9e9a4ba37808dd17bbc8e, type: 3}
+  initialSpawnCount: 4
+  envDieAmountMax: 5
+  envDieXShift: 30
+  scaleShiftLimits: 0400000008000000
+  floorTile: {fileID: 4323069840508827974, guid: a8610fd22146b2046be0b1eba33ac991, type: 3}
+  environmentDie: {fileID: 923780597217833626, guid: 1ba7224c02603ef46b6c39c48fa8c126, type: 3}
   nextSpawnPoint: {x: 0, y: 0, z: 0}
 --- !u!4 &1777102343
 Transform:

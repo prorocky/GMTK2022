@@ -5,11 +5,9 @@ using UnityEngine;
 public class FloorTile : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField]
-    FloorSpawner floorSpawner;
-    [SerializeField]
-    LayerMask playerLayer;
-    // Start is called before the first frame update
+    [SerializeField] private LayerMask playerLayer;
+    
+    private FloorSpawner floorSpawner;
     void Awake()
     {
         floorSpawner = GameObject.FindObjectOfType<FloorSpawner>();
@@ -21,12 +19,5 @@ public class FloorTile : MonoBehaviour
             floorSpawner.SpawnTile();
             Destroy(gameObject, 3);
         }
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
