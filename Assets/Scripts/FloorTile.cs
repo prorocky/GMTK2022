@@ -7,22 +7,26 @@ public class FloorTile : MonoBehaviour
     [Header("References")]
     [SerializeField]
     FloorSpawner floorSpawner;
+    [SerializeField]
+    LayerMask playerLayer;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         floorSpawner = GameObject.FindObjectOfType<FloorSpawner>();
     }
 
-    private void OnCollisionEexit(Collision col) 
-    {
-        print("in exit");
-        floorSpawner.SpawnTile();
-        Destroy(gameObject, 5);
+    private void OnTriggerEnter(Collider col) 
+    {   
+        if (col.gameObject.layer == 6) {
+            floorSpawner.SpawnTile();
+            Destroy(gameObject, 3);
+        }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
