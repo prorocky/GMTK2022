@@ -13,11 +13,11 @@ public class FloorTile : MonoBehaviour
         floorSpawner = GameObject.FindObjectOfType<FloorSpawner>();
     }
 
-    private void OnTriggerExit(Collider other) 
+    private void OnCollisionEexit(Collision col) 
     {
         print("in exit");
         floorSpawner.SpawnTile();
-        Destroy(gameObject, 2);
+        Destroy(gameObject, 5);
     }
 
     // Update is called once per frame

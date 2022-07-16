@@ -7,6 +7,7 @@ public class FloorSpawner : MonoBehaviour
     [Header("References")]
     [SerializeField]
     public GameObject floorTile;
+    [SerializeField]
     Vector3 nextSpawnPoint;
 
     public void SpawnTile() 
