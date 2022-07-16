@@ -372,7 +372,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f20449e4cabdb46b2b231bc082d26d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floorSpawner: {fileID: 0}
   playerLayer:
     serializedVersion: 2
     m_Bits: 64

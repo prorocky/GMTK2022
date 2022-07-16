@@ -1692,6 +1692,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1268815063}
   - component: {fileID: 1268815062}
+  - component: {fileID: 1268815064}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1727,6 +1728,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1268815064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268815061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e9610a421c2c943971aea5a7edd88f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  health: 0
+  tileSpawnNo: 0
+  obstacleSpawnFrequency: 0
 --- !u!1 &1323931876
 GameObject:
   m_ObjectHideFlags: 0
@@ -2625,7 +2642,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
+  gameManager: {fileID: 1268815064}
 --- !u!114 &1777102342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2639,12 +2657,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialSpawnCount: 4
+  numObstacles: 3
   envDieAmountMax: 5
   envDieXShift: 30
   scaleShiftLimits: 0400000008000000
+  gameManager: {fileID: 1268815064}
   floorTile: {fileID: 4323069840508827974, guid: a8610fd22146b2046be0b1eba33ac991, type: 3}
   environmentDie: {fileID: 923780597217833626, guid: 1ba7224c02603ef46b6c39c48fa8c126, type: 3}
   nextSpawnPoint: {x: 0, y: 0, z: 0}
+  holePrefab: {fileID: 1411109911982082472, guid: 68c8ae1642853034597f2cd1a2ae73db, type: 3}
+  obstaclePrefab: {fileID: 2921224594854988358, guid: c0a4cd938b721864697abb073b6035cd, type: 3}
+  wallPrefab: {fileID: 5295390904782327069, guid: 9eb0cbbc0d11cfc48b739e33a7cac7cf, type: 3}
 --- !u!4 &1777102343
 Transform:
   m_ObjectHideFlags: 0
