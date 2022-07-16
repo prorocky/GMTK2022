@@ -28,6 +28,9 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         newRotation = oldRotation = transform.rotation;
+        leftLaneXPosition = -2;
+        middleLaneXPosition = 0;
+        rightLaneXPosition = 2;
     }
 
     // Update is called once per frame

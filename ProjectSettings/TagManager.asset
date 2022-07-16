@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - EnvironmentSpawner
+  - LeftObstacle
+  - MidObstacle
+  - RightObstacle
   layers:
   - Default
   - TransparentFX
