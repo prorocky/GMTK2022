@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6989498614692414131}
   - component: {fileID: 6118645152600905766}
   - component: {fileID: 5393028289066933134}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FloorTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,6 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f20449e4cabdb46b2b231bc082d26d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  floorSpawner: {fileID: 0}
 --- !u!1 &5934817748134777000
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,7 +165,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2573323129089330975}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: NextSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

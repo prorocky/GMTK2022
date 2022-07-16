@@ -1,8 +1,11 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class FloorSpawner : MonoBehaviour
 {
     [Header("References")]
+    [SerializeField]
     public GameObject floorTile;
     Vector3 nextSpawnPoint;
 
@@ -15,7 +18,7 @@ public class FloorSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start() 
     {
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 4; i++)
         {
             SpawnTile();
         }
