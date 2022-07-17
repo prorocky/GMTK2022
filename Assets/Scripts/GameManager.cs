@@ -23,7 +23,6 @@ public class GameManager : MonoBehaviour
         score = 0;
         health = 3;
         tileSpawnNo = 0;
-        obstacleSpawnFrequency = 5;
 
         InvokeRepeating("IncreaseScore", 0f, 0.5f);
     }
