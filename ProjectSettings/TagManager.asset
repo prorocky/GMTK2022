@@ -8,6 +8,12 @@ TagManager:
   - LeftObstacle
   - MidObstacle
   - RightObstacle
+  - Side5
+  - Side3
+  - Side4
+  - Side1
+  - Side2
+  - Side6
   layers:
   - Default
   - TransparentFX
@@ -20,7 +26,7 @@ TagManager:
   - Obstacle
   - Wall
   - 
-  - 
+  - Post Processing
   - 
   - 
   - 

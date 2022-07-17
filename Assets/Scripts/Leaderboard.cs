@@ -8,6 +8,7 @@ public class Leaderboard : MonoBehaviour
 {
     [Header("Leaderboard ID ")]
     [SerializeField] private int leaderBoardID = 4753;    //ID which is found in website(corresponds to specific leaderboard)
+    
     [Header("Display Name and Scores")]
     public TextMeshProUGUI playerNames;
     public TextMeshProUGUI playerScores;
@@ -15,6 +16,7 @@ public class Leaderboard : MonoBehaviour
     [Header("Rank")]
     [SerializeField] private TMP_Text playersrank;
     [SerializeField] private string playerID;
+
     [Header("Reference")]
     [SerializeField] private LegMovement movementScript;
 
@@ -50,8 +52,8 @@ public class Leaderboard : MonoBehaviour
         {
             if(response.success)
             {
-                string tempPlayerNames = "Names\n";
-                string tempPlayerScores = "Scores\n";
+                string tempPlayerNames = "Names\n\n";
+                string tempPlayerScores = "Scores\n\n";
 
                 LootLockerLeaderboardMember[] members = response.items;
 
