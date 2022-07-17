@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Bender Ground
+  m_Name: Bender Obstacle
   m_Shader: {fileID: -6465566751694194690, guid: ad3a22f47571ecf4080fc8a9d608ad9b, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -74,7 +74,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _objectTexture:
-        m_Texture: {fileID: 2800000, guid: b3c78790800fd5242b336b550f0de3cb, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9754e82fd4e0ad24bb4f786cd37358a8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Ints: []
@@ -97,7 +97,7 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - _alphaValue: 1
+    - _alphaValue: 0.35
     - _bendAmount: 0.0019
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}

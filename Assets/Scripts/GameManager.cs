@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private GameOver gameOverScript;
+    [SerializeField] private GameObject[] hearts;
 
     [Header("General")]
     [SerializeField] public int score;
@@ -36,6 +37,7 @@ public class GameManager : MonoBehaviour
 
     public void LoseHealth() {
         health--;
+        hearts[health].SetActive(false);
         if (health <= 0)
             gameOverScript.EndGame(score);
     }

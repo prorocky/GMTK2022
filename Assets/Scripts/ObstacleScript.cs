@@ -28,7 +28,7 @@ public class ObstacleScript : MonoBehaviour
         gameManager = GameObject.FindObjectOfType<GameManager>();
         side = GameObject.FindObjectOfType<SideDetection>();
         GameObject spawnedNumber = Instantiate(numberPrefabs[value - 1], transform.position - obstacleNumberOffset, transform.rotation);
-        spawnedNumber.transform.rotation *= Quaternion.Euler(-90f, 180f, 0f);
+        //spawnedNumber.transform.rotation *= Quaternion.Euler(-90f, 180f, 0f);
     }
 
 

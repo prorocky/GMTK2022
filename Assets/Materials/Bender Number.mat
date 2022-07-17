@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Bender Whiteish
+  m_Name: Bender Number
   m_Shader: {fileID: -6465566751694194690, guid: ad3a22f47571ecf4080fc8a9d608ad9b, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -73,6 +73,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _objectTexture:
+        m_Texture: {fileID: 2800000, guid: 87ca9ea9d70933f4198b33c5fc9be730, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _BUILTIN_QueueControl: 0
@@ -93,6 +97,7 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
+    - _alphaValue: 0.75
     - _bendAmount: 0.0019
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}

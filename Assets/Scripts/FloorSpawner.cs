@@ -11,6 +11,7 @@ public class FloorSpawner : MonoBehaviour
     [SerializeField] private float envDieXShift = 30f;
     [SerializeField] private float envDieZShift = 50f;
     [SerializeField] private int[] scaleShiftLimits = new int[] {2, 4};
+    [SerializeField] private int[] variationThreshhold;
 
     [Header("References")]
     [SerializeField] public GameManager gameManager;
@@ -98,7 +99,7 @@ public class FloorSpawner : MonoBehaviour
 
         // 1 obstacle, 2 holes
         switch (currentScore) {
-            case int n when n < 100:
+            case int n when n < variationThreshhold[0]:
                 obstacleIndex = Random.Range(0, 3);
                 for (int i = 0; i < numObstacles; i++) {
                     int xcoord = i * 2 - 2;
@@ -106,6 +107,7 @@ public class FloorSpawner : MonoBehaviour
                     Vector3 spawnPosition = new Vector3(xcoord, 1, zcoord);
                     if (i == obstacleIndex) {
                         GameObject spawnedObstacle = Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, tile.transform);
+                        spawnedObstacle.transform.rotation *= Quaternion.Euler(-90f, 180f, 0f);
                     } else {
                         Instantiate(holePrefab, spawnPosition, Quaternion.identity, tile.transform);
                     }
@@ -113,7 +115,7 @@ public class FloorSpawner : MonoBehaviour
                 break;
 
             // 2 obstacles, 1 hole
-            case int n when n < 180:
+            case int n when n < variationThreshhold[1]:
                 obstacleIndex = Random.Range(0, 3);
                 obstacleIndex2 = Random.Range(0, 3);
                 while (obstacleIndex == obstacleIndex2) {
@@ -132,7 +134,7 @@ public class FloorSpawner : MonoBehaviour
                 break;
 
             // 1 obstacles, 1 wall, 1 hole
-            case int n when n < 280:
+            case int n when n < variationThreshhold[2]:
                 obstacleIndex = Random.Range(0, 3);
                 obstacleIndex2 = Random.Range(0, 3);        // using obstacle2 as the index for the wall in this case
                 while (obstacleIndex == obstacleIndex2) {
@@ -153,7 +155,7 @@ public class FloorSpawner : MonoBehaviour
                 break;
             
             // 2 obstacles, 1 wall
-            case int n when n < 400:
+            case int n when n < variationThreshhold[3]:
                 obstacleIndex = Random.Range(0, 3);
                 obstacleIndex2 = Random.Range(0, 3);
                 while (obstacleIndex == obstacleIndex2) {
