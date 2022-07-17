@@ -6,8 +6,11 @@ public class CameraController : MonoBehaviour
 {
     [Header("General")]
     [SerializeField] private float movementSpeed = 1f;
-    [SerializeField] private Transform target;
     [SerializeField] private float smoothSpeed;
+
+    [Header("Reference")]
+    [SerializeField] private Transform target;
+
     private Vector3 targetPosition;
 
     void Start(){

@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [Header("General")]
+    
     [SerializeField] private float movementSpeed = 1f;
     [SerializeField] private float switchLaneSpeed = 1f;
     [SerializeField] private float rotateDuration = 1f;
-     [SerializeField] private float rotationSpeed = 10f;
+    [SerializeField] private float rotationSpeed = 10f;
     [SerializeField] private float leftLaneXPosition;
     [SerializeField] private float middleLaneXPosition;
     [SerializeField] private float rightLaneXPosition;
+
    
 
     private Vector3 targetPosition;
@@ -102,22 +103,18 @@ public class PlayerMovement : MonoBehaviour
         float x = 0f, y = 0f;
         if (Input.GetKeyDown(KeyCode.W))
         {
-            print("Forward");
             x = 90f;
         }
         else if (Input.GetKeyDown(KeyCode.S))
         {
-            print("Back");
             x = -90f;
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
-            print("Left");
             y = 90f;
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
-            print("Right");
             y = -90f;
         }
         // if rotation is nonzero, apply it
