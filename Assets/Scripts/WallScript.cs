@@ -15,12 +15,6 @@ public class WallScript : MonoBehaviour
         gameManager = GameObject.FindObjectOfType<GameManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void OnTriggerEnter(Collider collider) {
         // if player hits wall, game over
         if (collider.gameObject.layer == playerLayer) {

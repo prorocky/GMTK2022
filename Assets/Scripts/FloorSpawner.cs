@@ -127,6 +127,7 @@ public class FloorSpawner : MonoBehaviour
                     Vector3 spawnPosition = new Vector3(xcoord, 1, zcoord);
                     if (i == obstacleIndex || i == obstacleIndex2) {
                         GameObject spawnedObstacle = Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, tile.transform);
+                        spawnedObstacle.transform.rotation *= Quaternion.Euler(-90f, 180f, 0f);
                     } else {
                         Instantiate(holePrefab, spawnPosition, Quaternion.identity, tile.transform);
                     }
@@ -146,8 +147,10 @@ public class FloorSpawner : MonoBehaviour
                     Vector3 spawnPosition = new Vector3(xcoord, 1, zcoord);
                     if (i == obstacleIndex) {
                         GameObject spawnedObstacle = Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, tile.transform);
+                        spawnedObstacle.transform.rotation *= Quaternion.Euler(-90f, 180f, 0f);
                     } else if (i == obstacleIndex2) {
-                        Instantiate(wallPrefab, spawnPosition, Quaternion.identity, tile.transform);
+                        GameObject spawnedObstacle = Instantiate(wallPrefab, spawnPosition, Quaternion.identity, tile.transform);
+                        spawnedObstacle.transform.rotation *= Quaternion.Euler(-90f, 180f, 0f);
                     } else {
                         Instantiate(holePrefab, spawnPosition, Quaternion.identity, tile.transform);
                     }
@@ -167,8 +170,10 @@ public class FloorSpawner : MonoBehaviour
                     Vector3 spawnPosition = new Vector3(xcoord, 1, zcoord);
                     if (i == obstacleIndex || i == obstacleIndex2) {
                         GameObject spawnedObstacle = Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, tile.transform);
+                        spawnedObstacle.transform.rotation *= Quaternion.Euler(-90f, 180f, 0f);
                     } else {
-                        Instantiate(wallPrefab, spawnPosition, Quaternion.identity, tile.transform);
+                        GameObject spawnedObstacle = Instantiate(wallPrefab, spawnPosition, Quaternion.identity, tile.transform);
+                        spawnedObstacle.transform.rotation *= Quaternion.Euler(-90f, 180f, 0f);
                     }
                 }
                 break;
@@ -182,8 +187,10 @@ public class FloorSpawner : MonoBehaviour
                     Vector3 spawnPosition = new Vector3(xcoord, 1, zcoord);
                     if (i == obstacleIndex) {
                         GameObject spawnedObstacle = Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, tile.transform);
+                        spawnedObstacle.transform.rotation *= Quaternion.Euler(-90f, 180f, 0f);
                     } else {
-                        Instantiate(wallPrefab, spawnPosition, Quaternion.identity, tile.transform);
+                        GameObject spawnedObstacle = Instantiate(wallPrefab, spawnPosition, Quaternion.identity, tile.transform);
+                        spawnedObstacle.transform.rotation *= Quaternion.Euler(-90f, 180f, 0f);
                     }
                 }
                 break;

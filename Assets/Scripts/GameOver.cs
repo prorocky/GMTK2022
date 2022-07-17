@@ -14,14 +14,6 @@ public class GameOver : MonoBehaviour
     [Header("Script Reference To Leaderboard")]
     [SerializeField] public Leaderboard leaderboard;
 
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-
     public void EndGame(int score) {
         StartCoroutine(SubmitScore(score));
         youScored.text = "You Scored: " + score.ToString("F0");

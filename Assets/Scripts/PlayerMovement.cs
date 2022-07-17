@@ -7,6 +7,10 @@ public class PlayerMovement : MonoBehaviour
     [Header("General")]
     [SerializeField] private float rotateDuration = 1f;
     [SerializeField] private float rotationSpeed = 10f;
+
+    [Header("References")]
+    [SerializeField] private AudioClip dieFlipSound;
+    [SerializeField] private AudioManager audioManagerScript;
    
     private Vector3 targetPosition;
     private bool rotating = false;
@@ -15,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        audioManagerScript = GameObject.Find("DieFlipNoise").GetComponent<AudioManager>();
         newRotation = oldRotation = transform.rotation;
     }
 
@@ -33,29 +38,22 @@ public class PlayerMovement : MonoBehaviour
     void UpdateRotationState(){
         // Get the rotation, if any
         float x = 0f, y = 0f;
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            // print("Forward");
+        if (Input.GetKeyDown(KeyCode.W)) {
             x = 90f;
-        }
-        else if (Input.GetKeyDown(KeyCode.S))
-        {
-            // print("Back");
+        } else if (Input.GetKeyDown(KeyCode.S)) {
             x = -90f;
         }
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            // print("Left");
+
+        if (Input.GetKeyDown(KeyCode.A)) {
             y = 90f;
-        }
-        else if (Input.GetKeyDown(KeyCode.D))
-        {
-            // print("Right");
+        } else if (Input.GetKeyDown(KeyCode.D)) {
             y = -90f;
         }
+
         // if rotation is nonzero, apply it
         if (x != 0f || y != 0f)
         {
+            audioManagerScript.PlayAudio(dieFlipSound);
             newRotation = Quaternion.Euler(x, y, 0f) * newRotation;
             oldRotation = transform.rotation;
             rotateDuration = 0f;

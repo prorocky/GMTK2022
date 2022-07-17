@@ -921,7 +921,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a56b26aa307048440a40848eb6904211, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c2f9720bd62bdd74888e81441fb24ce4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -945,7 +945,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
 --- !u!1 &526915742
 GameObject:
@@ -1494,7 +1494,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &931576581
 GameObject:
@@ -2307,58 +2307,8 @@ Transform:
   - {fileID: 58535736}
   - {fileID: 1685841224}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1833033510
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1833033511}
-  - component: {fileID: 1833033512}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1833033511
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1833033510}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 27.196234, y: -2.3557239, z: 249.1442}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1833033512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1833033510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6e9610a421c2c943971aea5a7edd88f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameOverScript: {fileID: 0}
-  score: 0
-  health: 0
-  tileSpawnNo: 0
-  obstacleSpawnFrequency: 0
-  Score: {fileID: 0}
 --- !u!1 &2003170687
 GameObject:
   m_ObjectHideFlags: 0
@@ -2920,8 +2870,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 535b43ebabda0b949871cd92a1d17556, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateDuration: 1
-  rotationSpeed: 10
 --- !u!4 &4146787572593922740
 Transform:
   m_ObjectHideFlags: 0
@@ -4100,7 +4048,7 @@ Transform:
   - {fileID: 1681499729217820599}
   - {fileID: 6583251773060632717}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!95 &7774680026256656173
 Animator:

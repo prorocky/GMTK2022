@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Bender Obstacle
-  m_Shader: {fileID: -6465566751694194690, guid: ad3a22f47571ecf4080fc8a9d608ad9b, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 4e40ca5244cfd7a42a4e3a0daeecb109, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4

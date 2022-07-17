@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
     [Header("References")]
     [SerializeField] private GameOver gameOverScript;
     [SerializeField] private GameObject[] hearts;
+    [SerializeField] private AudioManager audioManagerScript;
+    [SerializeField] private AudioClip wallCrash;
+    [SerializeField] private AudioClip hurtSound;
 
     [Header("General")]
     [SerializeField] public int score;
@@ -21,6 +24,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioManagerScript = GameObject.Find("WallNoise").GetComponent<AudioManager>();
         score = 0;
         health = 3;
         tileSpawnNo = 0;
@@ -43,6 +47,11 @@ public class GameManager : MonoBehaviour
     }
 
     public void EndGame() {
+        hearts[0].SetActive(false);
+        hearts[1].SetActive(false);
+        hearts[2].SetActive(false);
+        audioManagerScript.PlayAudio(wallCrash);
+        audioManagerScript.PlayAudio(hurtSound);
         gameOverScript.EndGame(score);
     }
 
