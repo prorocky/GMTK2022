@@ -96,7 +96,7 @@ public class FloorSpawner : MonoBehaviour
 
         // 1 obstacle, 2 holes
         switch (currentScore) {
-            case int n when n < 3:
+            case int n when n < 100:
                 obstacleIndex = Random.Range(0, 3);
                 for (int i = 0; i < numObstacles; i++) {
                     int xcoord = i * 2 - 2;
@@ -115,7 +115,7 @@ public class FloorSpawner : MonoBehaviour
                 break;
 
             // 2 obstacles, 1 hole
-            case int n when n < 10:
+            case int n when n < 180:
                 obstacleIndex = Random.Range(0, 3);
                 obstacleIndex2 = Random.Range(0, 3);
                 while (obstacleIndex == obstacleIndex2) {
@@ -134,7 +134,7 @@ public class FloorSpawner : MonoBehaviour
                 break;
 
             // 1 obstacles, 1 wall, 1 hole
-            case int n when n < 17:
+            case int n when n < 280:
                 obstacleIndex = Random.Range(0, 3);
                 obstacleIndex2 = Random.Range(0, 3);        // using obstacle2 as the index for the wall in this case
                 while (obstacleIndex == obstacleIndex2) {
@@ -155,7 +155,7 @@ public class FloorSpawner : MonoBehaviour
                 break;
             
             // 2 obstacles, 1 wall
-            case int n when n < 25:
+            case int n when n < 400:
                 obstacleIndex = Random.Range(0, 3);
                 obstacleIndex2 = Random.Range(0, 3);
                 while (obstacleIndex == obstacleIndex2) {
