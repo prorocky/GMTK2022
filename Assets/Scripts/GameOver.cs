@@ -6,7 +6,8 @@ using TMPro;
 public class GameOver : MonoBehaviour
 {
 
-    //[SerializeField] private TMP_Text youScored;
+    [SerializeField] private TextMeshProUGUI youScored;
+    [SerializeField] private GameObject displayscore;
     [SerializeField] private GameObject name;
     [SerializeField] private GameObject continueButton;
     [SerializeField] private bool gameNotOver = true;
@@ -26,9 +27,8 @@ public class GameOver : MonoBehaviour
 
 
     void EndGame() {
-        //youScored.text = "You Scored: " + LegMovementscript.currentScore;
-        //youScored.meshRenderer.enabled = true;
-        //youScored.SetActive(true);
+        youScored.text = "You Scored: " + LegMovementscript.currentScore.ToString("F0");
+        displayscore.SetActive(true);
         name.SetActive(true);
         continueButton.SetActive(true);
         Time.timeScale = 0;     //pause game

@@ -559,6 +559,9 @@ MonoBehaviour:
   leaderBoardID: 4753
   playerNames: {fileID: 243899381}
   playerScores: {fileID: 147813465}
+  playersrank: {fileID: 0}
+  playerID: 
+  movementScript: {fileID: 0}
 --- !u!4 &339353336
 Transform:
   m_ObjectHideFlags: 0

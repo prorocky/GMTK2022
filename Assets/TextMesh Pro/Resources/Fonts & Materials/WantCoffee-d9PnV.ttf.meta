@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: aa813fa85b74bf449978ea4e8d235071
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Want Coffee
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: ba443e1fa851b604cacb0712b6daaf6c, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
