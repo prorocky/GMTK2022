@@ -91,9 +91,12 @@ public class FloorSpawner : MonoBehaviour
     // As time goes on/score increases, open holes will not appear
     // Eventually when score gets high enough the only configuration will be 1 obstacle and 2 walls
     public void CreateObstacles(GameObject tile, int currentScore) {
+        int obstacleIndex, obstacleIndex2;
+
+        // 1 obstacle, 2 holes
         switch (currentScore) {
             case int n when n < 3:
-                int obstacleIndex = Random.Range(0, 3);
+                obstacleIndex = Random.Range(0, 3);
                 for (int i = 0; i < numObstacles; i++) {
                     int xcoord = i * 2 - 2;
                     int zcoord = (int)nextSpawnPoint.z + 10;
@@ -106,6 +109,79 @@ public class FloorSpawner : MonoBehaviour
                 }
                 break;
 
+            // 2 obstacles, 1 hole
+            case int n when n < 10:
+                obstacleIndex = Random.Range(0, 3);
+                obstacleIndex2 = Random.Range(0, 3);
+                while (obstacleIndex != obstacleIndex2) {
+                    obstacleIndex2 = Random.Range(0, 3);
+                }
+                for (int i = 0; i < numObstacles; i++) {
+                    int xcoord = i * 2 - 2;
+                    int zcoord = (int)nextSpawnPoint.z + 10;
+                    Vector3 spawnPosition = new Vector3(xcoord, 1, zcoord);
+                    if (i == obstacleIndex || i == obstacleIndex2) {
+                        Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, tile.transform);
+                    } else {
+                        Instantiate(holePrefab, spawnPosition, Quaternion.identity, tile.transform);
+                    }
+                }
+                break;
+
+            // 1 obstacles, 1 wall, 1 hole
+            case int n when n < 17:
+                obstacleIndex = Random.Range(0, 3);
+                obstacleIndex2 = Random.Range(0, 3);        // using obstacle2 as the index for the wall in this case
+                while (obstacleIndex != obstacleIndex2) {
+                    obstacleIndex2 = Random.Range(0, 3);
+                }
+                for (int i = 0; i < numObstacles; i++) {
+                    int xcoord = i * 2 - 2;
+                    int zcoord = (int)nextSpawnPoint.z + 10;
+                    Vector3 spawnPosition = new Vector3(xcoord, 1, zcoord);
+                    if (i == obstacleIndex) {
+                        Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, tile.transform);
+                    } else if (i == obstacleIndex2) {
+                        Instantiate(wallPrefab, spawnPosition, Quaternion.identity, tile.transform);
+                    } else {
+                        Instantiate(holePrefab, spawnPosition, Quaternion.identity, tile.transform);
+                    }
+                }
+                break;
+            
+            // 2 obstacles, 1 wall
+            case int n when n < 25:
+                obstacleIndex = Random.Range(0, 3);
+                obstacleIndex2 = Random.Range(0, 3);
+                while (obstacleIndex != obstacleIndex2) {
+                    obstacleIndex2 = Random.Range(0, 3);
+                }
+                for (int i = 0; i < numObstacles; i++) {
+                    int xcoord = i * 2 - 2;
+                    int zcoord = (int)nextSpawnPoint.z + 10;
+                    Vector3 spawnPosition = new Vector3(xcoord, 1, zcoord);
+                    if (i == obstacleIndex || i == obstacleIndex2) {
+                        Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, tile.transform);
+                    } else {
+                        Instantiate(wallPrefab, spawnPosition, Quaternion.identity, tile.transform);
+                    }
+                }
+                break;
+            
+            // 1 obstacle, 2 walls
+            default:
+                obstacleIndex = Random.Range(0, 3);
+                for (int i = 0; i < numObstacles; i++) {
+                    int xcoord = i * 2 - 2;
+                    int zcoord = (int)nextSpawnPoint.z + 10;
+                    Vector3 spawnPosition = new Vector3(xcoord, 1, zcoord);
+                    if (i == obstacleIndex) {
+                        Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, tile.transform);
+                    } else {
+                        Instantiate(wallPrefab, spawnPosition, Quaternion.identity, tile.transform);
+                    }
+                }
+                break;
         }
     }
 }
