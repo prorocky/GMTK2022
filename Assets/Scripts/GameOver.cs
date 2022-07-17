@@ -19,10 +19,6 @@ public class GameOver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((LegMovementscript.currentScore >= 55) && (gameNotOver)){
-            EndGame();
-            gameNotOver = false;
-        }
     }
 
 

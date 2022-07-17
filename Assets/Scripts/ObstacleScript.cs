@@ -21,14 +21,14 @@ public class ObstacleScript : MonoBehaviour
         
     }
 
-    // void OnTriggerEnter(Collider collider) {
-    //     // check for value of player being equal to value of obstacle
-    //     if (collider.gameObject.faceValue == value) {
-    //         (gameManager.score)++;
-    //         // play sound effect for getting point
-    //         Destroy(gameObject);    // Destroy to prevent being able to swap back and forth retriggering collision
-    //     } else {
-
-    //     }
-    // }
+    void OnTriggerEnter(Collider collider) {
+        // check for value of player being equal to value of obstacle
+        if (collider.gameObject.GetComponent<SideDetection>().dieCurrentFace == value) {
+            (gameManager.score)++;
+            // play sound effect for getting point
+            Destroy(gameObject);    // Destroy to prevent being able to swap back and forth retriggering collision
+        } else {
+            gameManager.loseHealth();
+        }
+    }
 }
