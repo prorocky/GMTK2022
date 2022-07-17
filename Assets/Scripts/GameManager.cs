@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        score = 11;
+        score = 0;
         health = 3;
         tileSpawnNo = 0;
         obstacleSpawnFrequency = 5;

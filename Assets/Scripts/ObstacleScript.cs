@@ -16,14 +16,18 @@ public class ObstacleScript : MonoBehaviour
     {
         gameManager = GameObject.FindObjectOfType<GameManager>();
         side = GameObject.FindObjectOfType<SideDetection>();
-        value = Random.Range(1, 7);    // (inclusive, exclusive)
-        print(value);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void SetValue() {
+        value = Random.Range(1, 7);    // (inclusive, exclusive)
+        print(value);
     }
 
     void OnTriggerEnter(Collider collider) {
