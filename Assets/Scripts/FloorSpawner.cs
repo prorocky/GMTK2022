@@ -102,8 +102,7 @@ public class FloorSpawner : MonoBehaviour
                     int zcoord = (int)nextSpawnPoint.z + 10;
                     Vector3 spawnPosition = new Vector3(xcoord, 1, zcoord);
                     if (i == obstacleIndex) {
-                        GameObject temp = Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, tile.transform);
-                        temp.GetComponent<ObstacleScript>().SetValue();
+                        Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, tile.transform);
                     } else {
                         Instantiate(holePrefab, spawnPosition, Quaternion.identity, tile.transform);
                     }
@@ -122,8 +121,7 @@ public class FloorSpawner : MonoBehaviour
                     int zcoord = (int)nextSpawnPoint.z + 10;
                     Vector3 spawnPosition = new Vector3(xcoord, 1, zcoord);
                     if (i == obstacleIndex || i == obstacleIndex2) {
-                        GameObject temp = Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, tile.transform);
-                        temp.GetComponent<ObstacleScript>().SetValue();
+                        Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, tile.transform);
                     } else {
                         Instantiate(holePrefab, spawnPosition, Quaternion.identity, tile.transform);
                     }
@@ -142,8 +140,7 @@ public class FloorSpawner : MonoBehaviour
                     int zcoord = (int)nextSpawnPoint.z + 10;
                     Vector3 spawnPosition = new Vector3(xcoord, 1, zcoord);
                     if (i == obstacleIndex) {
-                        GameObject temp = Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, tile.transform);
-                        temp.GetComponent<ObstacleScript>().SetValue();
+                        Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, tile.transform);
                     } else if (i == obstacleIndex2) {
                         Instantiate(wallPrefab, spawnPosition, Quaternion.identity, tile.transform);
                     } else {
@@ -164,8 +161,7 @@ public class FloorSpawner : MonoBehaviour
                     int zcoord = (int)nextSpawnPoint.z + 10;
                     Vector3 spawnPosition = new Vector3(xcoord, 1, zcoord);
                     if (i == obstacleIndex || i == obstacleIndex2) {
-                        GameObject temp = Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, tile.transform);
-                        temp.GetComponent<ObstacleScript>().SetValue();
+                        Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, tile.transform);
                     } else {
                         Instantiate(wallPrefab, spawnPosition, Quaternion.identity, tile.transform);
                     }
@@ -180,8 +176,7 @@ public class FloorSpawner : MonoBehaviour
                     int zcoord = (int)nextSpawnPoint.z + 10;
                     Vector3 spawnPosition = new Vector3(xcoord, 1, zcoord);
                     if (i == obstacleIndex) {
-                        GameObject temp = Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, tile.transform);
-                        temp.GetComponent<ObstacleScript>().SetValue();
+                        Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, tile.transform);
                     } else {
                         Instantiate(wallPrefab, spawnPosition, Quaternion.identity, tile.transform);
                     }
