@@ -1846,7 +1846,7 @@ MonoBehaviour:
   target: {fileID: 8898268116613136810}
   smoothSpeed: 0.05
   cameraOffset:
-  - 3
+  - 4
   - 7
 --- !u!1 &1257932661
 GameObject:
