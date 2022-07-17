@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] public int tileSpawnNo;
     [SerializeField] public int obstacleSpawnFrequency;     // Every x tiles spawn an obstacle/wall
     [SerializeField] TMP_Text Score;
+    [SerializeField] float timer = 0.0f;
     
 
 
@@ -26,15 +27,18 @@ public class GameManager : MonoBehaviour
         tileSpawnNo = 0;
         obstacleSpawnFrequency = 5;
 
+        InvokeRepeating("IncreaseScore", 0f, 0.5f);
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        // score += (int)(Time.deltaTime * 100);
         Score.text = "Score: " + score.ToString("F0");
     }
 
-    public void loseHealth() {
+    public void LoseHealth() {
         health--;
         if (health <= 0)
             gameOverScript.EndGame(score);
@@ -45,8 +49,12 @@ public class GameManager : MonoBehaviour
     }
 
     public float SetMoveSpeed() {
-        return Mathf.Min(score / 10 + 1, 10);
+        return Mathf.Min(score / 100 + 1, 10);
 
+    }
+
+    void IncreaseScore() {
+        score += 1;
     }
 
 }

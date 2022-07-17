@@ -30,17 +30,18 @@ public class ObstacleScript : MonoBehaviour
         print(value);
     }
 
+
     void OnTriggerEnter(Collider collider) {
         // check if collider is player
         if (collider.gameObject.layer == playerLayer) {
         
             // check for value of player being equal to value of obstacle
             if (side.dieCurrentFace == value) {
-                (gameManager.score)++;
+                gameManager.score += 20;
                 // play sound effect for getting point
                 
             } else {
-                gameManager.loseHealth();
+                gameManager.LoseHealth();
             }
             Destroy(gameObject);    // Destroy to prevent being able to swap back and forth retriggering collision
         }
