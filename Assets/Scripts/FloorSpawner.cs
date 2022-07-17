@@ -57,6 +57,7 @@ public class FloorSpawner : MonoBehaviour
             GameObject envDieSpawn = Instantiate(environmentDie, spawnOffset, Quaternion.identity);
 
             ObjectScaleChange(envDieSpawn);
+            Destroy(envDieSpawn, 15f);
             // float scaleChangeValue = Random.Range(4, 8);
             // Vector3 scaleChange = new Vector3 (scaleChangeValue, scaleChangeValue, scaleChangeValue);
             // envDieSpawn.transform.localScale += scaleChange;
@@ -67,6 +68,7 @@ public class FloorSpawner : MonoBehaviour
             GameObject envDieSpawn = Instantiate(environmentDie, spawnOffset, Quaternion.identity);
 
             ObjectScaleChange(envDieSpawn);
+            Destroy(envDieSpawn, 15f);
         }
     }
 
