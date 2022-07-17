@@ -2,7 +2,61 @@ fileFormatVersion: 2
 guid: a64c2a6cdcfec694eb3cd912c853ef50
 ModelImporter:
   serializedVersion: 21300
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -8901521735203956172
+    second: Die|BishopAction
+  - first:
+      74: -8491973348816130931
+    second: Die|BookAction
+  - first:
+      74: 8182058767038734976
+    second: Die|BookAction.001
+  - first:
+      74: 406793196697996673
+    second: Die|BookAction.002
+  - first:
+      74: 6416529253539338083
+    second: Die|BookAction.003
+  - first:
+      74: -1738138367940116787
+    second: Die|Cube.001Action
+  - first:
+      74: -6997668519730498654
+    second: Die|CubeAction
+  - first:
+      74: -2591469532790337484
+    second: Die|CubeAction.001
+  - first:
+      74: -5775564675744736263
+    second: Die|CubeAction.002
+  - first:
+      74: -8753270193164428442
+    second: Die|CubeAction.003
+  - first:
+      74: -2441773496696393302
+    second: Die|CubeAction.005
+  - first:
+      74: -1753679558623014878
+    second: Die|CylinderAction
+  - first:
+      74: 8291104800495549752
+    second: Die|CylinderAction.001
+  - first:
+      74: -1760869493668686477
+    second: Die|CylinderAction.002
+  - first:
+      74: -5040968766777196564
+    second: Die|CylinderAction.003
+  - first:
+      74: 5421950511881589781
+    second: Die|CylinderAction.004
+  - first:
+      74: -745600270179527044
+    second: Die|DieAction
+  - first:
+      74: 678980628458933058
+    second: Die|EmptyAction
   externalObjects:
   - first:
       type: UnityEngine:Material

@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 5031503728460082362}
   - component: {fileID: 3470933267373637205}
   - component: {fileID: 760945495640104870}
-  - component: {fileID: 6959844310193391959}
+  - component: {fileID: -426917019178869954}
   m_Layer: 6
-  m_Name: Player Cube
+  m_Name: Environment Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 6832947496105610607}
   m_LocalRotation: {x: 0.7069834, y: 0, z: 0, w: 0.7072302}
   m_LocalPosition: {x: -0, y: 1.4, z: 0}
-  m_LocalScale: {x: 0.01, y: 0.010000003, z: 0.010000003}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -64,8 +64,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8c8b77358a3e1674095d9409629f1b0e, type: 2}
-  - {fileID: 2100000, guid: 92dcd6ab763085b459c1a3f67be9bfe4, type: 2}
+  - {fileID: 2100000, guid: e17f33a9dc8db854ea1c8c6c310ee487, type: 2}
+  - {fileID: 2100000, guid: e17f33a9dc8db854ea1c8c6c310ee487, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -116,7 +116,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6959844310193391959
+--- !u!114 &-426917019178869954
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,8 +125,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6832947496105610607}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 535b43ebabda0b949871cd92a1d17556, type: 3}
+  m_Script: {fileID: 11500000, guid: a88c3a5e17abbf44299b190bbf8341a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateDuration: 1
-  rotationSpeed: 10
+  rotationAngleLimit: 30

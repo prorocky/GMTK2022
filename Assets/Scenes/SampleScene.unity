@@ -1506,8 +1506,8 @@ Camera:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.0048059775, g: 0.046962127, b: 0.11320752, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2373,37 +2373,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1579132065}
   m_CullTransparentMesh: 1
---- !u!1 &1609726352
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1609726353}
-  m_Layer: 0
-  m_Name: testparet
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1609726353
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1609726352}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.6924472, y: -3.465375, z: 16.428087}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1634790447
 GameObject:
   m_ObjectHideFlags: 0
@@ -2544,21 +2513,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4417295495839935392}
     m_Modifications:
+    - target: {fileID: 5031503728460082362, guid: cae10fa7ac86afc4487648aec5393b63, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5031503728460082362, guid: cae10fa7ac86afc4487648aec5393b63, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e17f33a9dc8db854ea1c8c6c310ee487, type: 2}
     - target: {fileID: 6167768917779765205, guid: cae10fa7ac86afc4487648aec5393b63, type: 3}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6167768917779765205, guid: cae10fa7ac86afc4487648aec5393b63, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 6167768917779765205, guid: cae10fa7ac86afc4487648aec5393b63, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.010000003
-      objectReference: {fileID: 0}
-    - target: {fileID: 6167768917779765205, guid: cae10fa7ac86afc4487648aec5393b63, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.010000003
       objectReference: {fileID: 0}
     - target: {fileID: 6167768917779765205, guid: cae10fa7ac86afc4487648aec5393b63, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2652,14 +2617,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef6d308a7eb99d246acec2f03e2f547e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialSpawnCount: 4
+  initialSpawnCount: 7
   numObstacles: 3
   envDieAmountMax: 5
   envDieXShift: 30
-  scaleShiftLimits: 0400000008000000
+  envDieZShift: 50
+  scaleShiftLimits: 0300000006000000
   gameManager: {fileID: 1268815064}
   floorTile: {fileID: 4323069840508827974, guid: a8610fd22146b2046be0b1eba33ac991, type: 3}
-  environmentDie: {fileID: 923780597217833626, guid: 1ba7224c02603ef46b6c39c48fa8c126, type: 3}
+  environmentDie: {fileID: 6832947496105610607, guid: 2d93df1a9f14d3849add05fd20b6b9df, type: 3}
   nextSpawnPoint: {x: 0, y: 0, z: 0}
   holePrefab: {fileID: 1411109911982082472, guid: 68c8ae1642853034597f2cd1a2ae73db, type: 3}
   obstaclePrefab: {fileID: 2921224594854988358, guid: c0a4cd938b721864697abb073b6035cd, type: 3}
@@ -3025,7 +2991,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3912388998691083171}
   m_LocalRotation: {x: -0, y: -0, z: 4.2351647e-22, w: 1}
-  m_LocalPosition: {x: 7.0339835e-15, y: 0.00000011920929, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3079,15 +3045,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 3912388998691083171}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3248d5e84a5e4bb4cb1cf27da2292706, type: 3}
+  m_Script: {fileID: 11500000, guid: eb011a5a63241374a99a8d6aacce514c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 10
-  target: {fileID: 1099559253}
-  smoothSpeed: 0.05
-  cameraOffset:
-  - 3
-  - 7
+  switchLaneSpeed: 5
+  leftLaneXPosition: -2
+  middleLaneXPosition: 0
+  rightLaneXPosition: 2
 --- !u!4 &4417295495839935392
 Transform:
   m_ObjectHideFlags: 0

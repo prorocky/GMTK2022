@@ -9,6 +9,7 @@ public class FloorSpawner : MonoBehaviour
     [SerializeField] private int numObstacles = 3;
     [SerializeField] private int envDieAmountMax = 5;
     [SerializeField] private float envDieXShift = 30f;
+    [SerializeField] private float envDieZShift = 50f;
     [SerializeField] private int[] scaleShiftLimits = new int[] {2, 4};
 
     [Header("References")]
@@ -74,7 +75,7 @@ public class FloorSpawner : MonoBehaviour
         float zAxis = Random.Range(0, 20);
 
 
-        Vector3 newOffset = nextSpawnPoint + new Vector3 (envDieXShift * side, 0f, 0f);
+        Vector3 newOffset = nextSpawnPoint + new Vector3 (envDieXShift * side, 0f, envDieZShift);
         newOffset += new Vector3 (xAxis, yAxis, zAxis);
 
         return newOffset;
