@@ -5,7 +5,7 @@ using UnityEngine;
 public class SideDetection : MonoBehaviour
 {
     [Header("General")]
-    [SerializeField] private int dieCurrentFace = 1;
+    [SerializeField] public int dieCurrentFace = 1;
 
     [Header("Reference")]
     [SerializeField] private Transform target;
