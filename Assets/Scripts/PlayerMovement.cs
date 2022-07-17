@@ -35,22 +35,22 @@ public class PlayerMovement : MonoBehaviour
         float x = 0f, y = 0f;
         if (Input.GetKeyDown(KeyCode.W))
         {
-            print("Forward");
+            // print("Forward");
             x = 90f;
         }
         else if (Input.GetKeyDown(KeyCode.S))
         {
-            print("Back");
+            // print("Back");
             x = -90f;
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
-            print("Left");
+            // print("Left");
             y = 90f;
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
-            print("Right");
+            // print("Right");
             y = -90f;
         }
         // if rotation is nonzero, apply it

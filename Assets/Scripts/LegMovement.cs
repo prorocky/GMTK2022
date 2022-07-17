@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class LegMovement : MonoBehaviour
 {
@@ -11,10 +10,6 @@ public class LegMovement : MonoBehaviour
     [SerializeField] private float leftLaneXPosition = -2f;
     [SerializeField] private float middleLaneXPosition = 0f;
     [SerializeField] private float rightLaneXPosition = 2f;
-
-    [Header("CurrentScore")]
-    [SerializeField] TMP_Text Score;
-    [SerializeField] public float currentScore = 0f;
 
     private Vector3 targetPosition;
     // Start is called before the first frame update
@@ -26,9 +21,6 @@ public class LegMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //player's score
-        currentScore = transform.position.z;
-        Score.text = "Score: " + currentScore.ToString("F0");
 
         //player's movement
         targetPosition = transform.position - new Vector3(0,0, -100f);
@@ -36,7 +28,7 @@ public class LegMovement : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveZStep);
 
         if(Input.GetKeyDown("q")){
-            print("TEST Q");
+            // print("TEST Q");
             // In middle lane, move left
             if(transform.position.x == middleLaneXPosition){
                 transform.position = Vector3.MoveTowards(transform.position, new Vector3(leftLaneXPosition, transform.position.y, transform.position.z), switchLaneSpeed);

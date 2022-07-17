@@ -1743,7 +1743,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3248d5e84a5e4bb4cb1cf27da2292706, type: 3}
+  m_Script: {fileID: 11500000, guid: d74b0fcdf83069c4a89010de07676261, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 10
@@ -1946,10 +1946,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6e9610a421c2c943971aea5a7edd88f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverScript: {fileID: 1268815065}
   score: 0
   health: 0
   tileSpawnNo: 0
   obstacleSpawnFrequency: 0
+  Score: {fileID: 1257932663}
 --- !u!114 &1268815065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1966,8 +1968,6 @@ MonoBehaviour:
   displayScore: {fileID: 192022972}
   inputName: {fileID: 8871842}
   continueButton: {fileID: 1733037897}
-  gameNotOver: 1
-  LegMovementscript: {fileID: 2925012023918042692}
 --- !u!1 &1323931876
 GameObject:
   m_ObjectHideFlags: 0
@@ -3637,7 +3637,7 @@ GameObject:
   - component: {fileID: 1555979704049527754}
   - component: {fileID: 1555979704049527755}
   - component: {fileID: 1555979704049527764}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Side5
   m_TagString: Side5
   m_Icon: {fileID: 0}
@@ -3722,7 +3722,7 @@ GameObject:
   - component: {fileID: 1555979704116415284}
   - component: {fileID: 1555979704116415285}
   - component: {fileID: 1555979704116415286}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: FaceDetection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3824,7 +3824,7 @@ GameObject:
   - component: {fileID: 1555979704316723725}
   - component: {fileID: 1555979704316723726}
   - component: {fileID: 1555979704316723727}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Side3
   m_TagString: Side3
   m_Icon: {fileID: 0}
@@ -4036,7 +4036,7 @@ GameObject:
   - component: {fileID: 1555979704913555219}
   - component: {fileID: 1555979704913555228}
   - component: {fileID: 1555979704913555229}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Side4
   m_TagString: Side4
   m_Icon: {fileID: 0}
@@ -4164,7 +4164,7 @@ GameObject:
   - component: {fileID: 1555979705383496705}
   - component: {fileID: 1555979705383496706}
   - component: {fileID: 1555979705383496707}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Side1
   m_TagString: Side1
   m_Icon: {fileID: 0}
@@ -4292,7 +4292,7 @@ GameObject:
   - component: {fileID: 1555979705672275762}
   - component: {fileID: 1555979705672275763}
   - component: {fileID: 1555979705672275772}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Side2
   m_TagString: Side2
   m_Icon: {fileID: 0}
@@ -4420,7 +4420,7 @@ GameObject:
   - component: {fileID: 1555979706067159433}
   - component: {fileID: 1555979706067159434}
   - component: {fileID: 1555979706067159435}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Side6
   m_TagString: Side6
   m_Icon: {fileID: 0}
@@ -4571,8 +4571,6 @@ MonoBehaviour:
   leftLaneXPosition: -2
   middleLaneXPosition: 0
   rightLaneXPosition: 2
-  Score: {fileID: 1257932663}
-  currentScore: 0
 --- !u!54 &2925012023918042693
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4929,7 +4927,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5423586052921724313}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 535b43ebabda0b949871cd92a1d17556, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ac4af1b024fe6947b4e5dd77c7a2e53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotateDuration: 1
