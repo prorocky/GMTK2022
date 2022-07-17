@@ -39,7 +39,18 @@ public class MenuManager : MonoBehaviour
     }
 
     public IEnumerator UpdateLeaderboard() {
+        yield return new WaitForSecondsRealtime(0.5f);
         yield return leaderboard.FetchTopHighscoresRoutine();
+    }
+
+
+
+    public void ObtainRank() {
+        StartCoroutine(ObtainingRank());
+    }
+
+    public IEnumerator ObtainingRank() {
+        yield return leaderboard.WaitRank();
     }
 
 

@@ -1460,6 +1460,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1411491357}
   - component: {fileID: 1411491356}
+  - component: {fileID: 1411491358}
   m_Layer: 0
   m_Name: BackgroundMusic
   m_TagString: Untagged
@@ -1578,6 +1579,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1411491358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411491355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f1e41f4d52068e4ab5c4cb3650a2687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Audio: {fileID: 1411491356}
+  checkingaudio: 1
 --- !u!1 &1412117340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1803,6 +1818,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
+  health: 0
+  tileSpawnNo: 0
+  obstacleSpawnFrequency: 0
 --- !u!1 &2003170687
 GameObject:
   m_ObjectHideFlags: 0
