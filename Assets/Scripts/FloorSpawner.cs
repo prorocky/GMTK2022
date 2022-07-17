@@ -106,10 +106,6 @@ public class FloorSpawner : MonoBehaviour
                     Vector3 spawnPosition = new Vector3(xcoord, 1, zcoord);
                     if (i == obstacleIndex) {
                         GameObject spawnedObstacle = Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, tile.transform);
-                        // int obstacleNumber = spawnedObstacle.GetComponent<ObstacleScript>().GetValue();
-                        // print("Obstacle Number: " + obstacleNumber);
-                        // Vector3 numberOffset = new Vector3(0f, 0f, obstacleNumberOffset);
-                        // Instantiate(numberPrefabs[obstacleNumber], spawnPosition - numberOffset, Quaternion.identity, spawnedObstacle.transform);
                     } else {
                         Instantiate(holePrefab, spawnPosition, Quaternion.identity, tile.transform);
                     }
