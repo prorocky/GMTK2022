@@ -122,3 +122,6 @@ MonoBehaviour:
   value: 0
   playerLayer: 6
   obstacleNumberOffset: {x: 0, y: 0, z: 0.25}
+  audioScriptReference: {fileID: 987625391, guid: 0c9f3487baa5b6b49a6c66a315f0658a, type: 3}
+  happyNoise: {fileID: 8300000, guid: 0f468ab5ffa633a43b5b5b793397ec7c, type: 3}
+  hurtNoise: {fileID: 8300000, guid: 95e0efd05ba35054f8344ee15277202e, type: 3}

@@ -13,6 +13,10 @@ public class LegMovement : MonoBehaviour
     [SerializeField] private float leftLaneXPosition = -2f;
     [SerializeField] private float middleLaneXPosition = 0f;
     [SerializeField] private float rightLaneXPosition = 2f;
+    
+    [Header("Audio")]
+    [SerializeField] private AudioClip laneChange;
+    [SerializeField] private AudioSource outAudio;
 
     private Vector3 targetPosition;
     // Start is called before the first frame update
@@ -33,11 +37,13 @@ public class LegMovement : MonoBehaviour
         if(Input.GetKeyDown("q") && !(Time.timeScale == 0)){
             // In middle lane, move left
             if(transform.position.x == middleLaneXPosition){
+                outAudio.PlayOneShot(laneChange);
                 transform.position = Vector3.MoveTowards(transform.position, new Vector3(leftLaneXPosition, transform.position.y, transform.position.z), switchLaneSpeed);
             }
 
             // In right lane, move left
             if(transform.position.x == rightLaneXPosition){
+                outAudio.PlayOneShot(laneChange);
                 transform.position = Vector3.MoveTowards(transform.position, new Vector3(middleLaneXPosition, transform.position.y, transform.position.z), switchLaneSpeed);
             }          
         }
@@ -46,11 +52,13 @@ public class LegMovement : MonoBehaviour
         if(Input.GetKeyDown("e") && !(Time.timeScale == 0)){
             // In middle lane, move right
             if(transform.position.x == middleLaneXPosition){
+                outAudio.PlayOneShot(laneChange);
                 transform.position = Vector3.MoveTowards(transform.position, new Vector3(rightLaneXPosition, transform.position.y, transform.position.z), switchLaneSpeed);
             }
 
             // In left lane, move rightc
             if(transform.position.x == leftLaneXPosition){
+                outAudio.PlayOneShot(laneChange);
                 transform.position = Vector3.MoveTowards(transform.position, new Vector3(middleLaneXPosition, transform.position.y, transform.position.z), switchLaneSpeed);
             }          
         }

@@ -29,7 +29,7 @@ public class PlayerManager : MonoBehaviour
     void Update()
     {
         if (pass){
-            StartCoroutine(PlayerDiesOnSpawn());
+            //StartCoroutine(PlayerDiesOnSpawn());
             pass = false;
         }
     }
