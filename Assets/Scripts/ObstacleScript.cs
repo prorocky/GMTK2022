@@ -7,27 +7,21 @@ public class ObstacleScript : MonoBehaviour
     [Header("References")]
     [SerializeField] GameManager gameManager;
     [SerializeField] SideDetection side;
+    [SerializeField] private GameObject[] numberPrefabs;
 
     [Header("General")]
     [SerializeField] public int value;
     [SerializeField] private int playerLayer = 6;
+    [SerializeField] private Vector3 obstacleNumberOffset = new Vector3 (0f, 0f, 2f);
     // Start is called before the first frame update
     void Start()
     {
+        value = Random.Range(1, 7);
+        print("VALUE:" + value);
         gameManager = GameObject.FindObjectOfType<GameManager>();
         side = GameObject.FindObjectOfType<SideDetection>();
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void SetValue() {
-        value = Random.Range(1, 7);    // (inclusive, exclusive)
-        print(value);
+        GameObject spawnedNumber = Instantiate(numberPrefabs[value - 1], transform.position - obstacleNumberOffset, transform.rotation);
+        spawnedNumber.transform.rotation *= Quaternion.Euler(-90f, 180f, 0f);
     }
 
     void OnTriggerEnter(Collider collider) {

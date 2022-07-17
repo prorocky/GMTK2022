@@ -111,4 +111,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
+  side: {fileID: 0}
+  numberPrefabs:
+  - {fileID: 1527891259179605982, guid: bbb64c83d18e3ec4785b871b57b3add0, type: 3}
+  - {fileID: 218181083559578078, guid: b6b7b7ffd243ada44a813ff1bc76c128, type: 3}
+  - {fileID: 1980073391509685858, guid: 16fd0f00d2e1c5142ac69f3158ec27ad, type: 3}
+  - {fileID: 2820073793455501088, guid: 190548656ffcf844d85aff402da9829f, type: 3}
+  - {fileID: 5460377758696831264, guid: a3b8c22c6c3a9bb438dee87a1a76fb90, type: 3}
+  - {fileID: 3563761550942092609, guid: 4330bfbbb3cf63b43af4664e8ca4dc69, type: 3}
   value: 0
+  playerLayer: 6
+  obstacleNumberOffset: {x: 0, y: 0, z: 0.25}

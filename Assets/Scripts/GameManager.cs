@@ -16,16 +16,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] TMP_Text Score;
     
 
-
-
     // Start is called before the first frame update
     void Start()
     {
         score = 0;
         health = 3;
         tileSpawnNo = 0;
-        obstacleSpawnFrequency = 5;
-
     }
 
     // Update is called once per frame

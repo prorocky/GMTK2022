@@ -20,6 +20,7 @@ public class FloorSpawner : MonoBehaviour
     [SerializeField] private GameObject holePrefab;
     [SerializeField] private GameObject obstaclePrefab;
     [SerializeField] private GameObject wallPrefab;
+    // [SerializeField] private GameObject[] numberPrefabs;
 
     // Start is called before the first frame update
     void Start() 
@@ -102,7 +103,11 @@ public class FloorSpawner : MonoBehaviour
                     int zcoord = (int)nextSpawnPoint.z + 10;
                     Vector3 spawnPosition = new Vector3(xcoord, 1, zcoord);
                     if (i == obstacleIndex) {
-                        GameObject temp = Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, tile.transform);
+                        GameObject spawnedObstacle = Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, tile.transform);
+                        // int obstacleNumber = spawnedObstacle.GetComponent<ObstacleScript>().GetValue();
+                        // print("Obstacle Number: " + obstacleNumber);
+                        // Vector3 numberOffset = new Vector3(0f, 0f, obstacleNumberOffset);
+                        // Instantiate(numberPrefabs[obstacleNumber], spawnPosition - numberOffset, Quaternion.identity, spawnedObstacle.transform);
                     } else {
                         Instantiate(holePrefab, spawnPosition, Quaternion.identity, tile.transform);
                     }
@@ -121,7 +126,7 @@ public class FloorSpawner : MonoBehaviour
                     int zcoord = (int)nextSpawnPoint.z + 10;
                     Vector3 spawnPosition = new Vector3(xcoord, 1, zcoord);
                     if (i == obstacleIndex || i == obstacleIndex2) {
-                        GameObject temp = Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, tile.transform);
+                        GameObject spawnedObstacle = Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, tile.transform);
                     } else {
                         Instantiate(holePrefab, spawnPosition, Quaternion.identity, tile.transform);
                     }
@@ -140,7 +145,7 @@ public class FloorSpawner : MonoBehaviour
                     int zcoord = (int)nextSpawnPoint.z + 10;
                     Vector3 spawnPosition = new Vector3(xcoord, 1, zcoord);
                     if (i == obstacleIndex) {
-                        GameObject temp = Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, tile.transform);
+                        GameObject spawnedObstacle = Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, tile.transform);
                     } else if (i == obstacleIndex2) {
                         Instantiate(wallPrefab, spawnPosition, Quaternion.identity, tile.transform);
                     } else {
@@ -161,7 +166,7 @@ public class FloorSpawner : MonoBehaviour
                     int zcoord = (int)nextSpawnPoint.z + 10;
                     Vector3 spawnPosition = new Vector3(xcoord, 1, zcoord);
                     if (i == obstacleIndex || i == obstacleIndex2) {
-                        GameObject temp = Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, tile.transform);
+                        GameObject spawnedObstacle = Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, tile.transform);
                     } else {
                         Instantiate(wallPrefab, spawnPosition, Quaternion.identity, tile.transform);
                     }
@@ -176,7 +181,7 @@ public class FloorSpawner : MonoBehaviour
                     int zcoord = (int)nextSpawnPoint.z + 10;
                     Vector3 spawnPosition = new Vector3(xcoord, 1, zcoord);
                     if (i == obstacleIndex) {
-                        GameObject temp = Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, tile.transform);
+                        GameObject spawnedObstacle = Instantiate(obstaclePrefab, spawnPosition, Quaternion.identity, tile.transform);
                     } else {
                         Instantiate(wallPrefab, spawnPosition, Quaternion.identity, tile.transform);
                     }
