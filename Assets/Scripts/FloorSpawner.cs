@@ -5,7 +5,7 @@ using UnityEngine;
 public class FloorSpawner : MonoBehaviour
 {
     [Header("General")]
-    [SerializeField] private int initialSpawnCount = 4;
+    [SerializeField] private int initialSpawnCount = 2;
     [SerializeField] private int numObstacles = 3;
     [SerializeField] private int envDieAmountMax = 5;
     [SerializeField] private float envDieXShift = 30f;

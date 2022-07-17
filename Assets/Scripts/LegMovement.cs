@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class LegMovement : MonoBehaviour
 {
+    [Header("References")]
+    [SerializeField] GameManager gameManager;
+    
     [Header("General")]
     [SerializeField] private float movementSpeed = 1f;
     [SerializeField] private float switchLaneSpeed = 1f;

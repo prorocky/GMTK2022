@@ -44,4 +44,9 @@ public class GameManager : MonoBehaviour
         gameOverScript.EndGame(score);
     }
 
+    public float SetMoveSpeed() {
+        return Mathf.Min(score / 10 + 1, 10);
+
+    }
+
 }
