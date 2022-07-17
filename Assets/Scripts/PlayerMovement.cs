@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(rotateDuration < 1f){
             rotateDuration += Time.deltaTime * rotationSpeed;
-            transform.rotation = Quaternion.Slerp(oldRotation, newRotation, rotateDuration);
+            transform.rotation = Quaternion.Lerp(oldRotation, newRotation, rotateDuration);
         }
     }
 

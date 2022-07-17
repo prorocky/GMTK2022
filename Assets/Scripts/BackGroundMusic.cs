@@ -8,11 +8,13 @@ public class BackGroundMusic : MonoBehaviour
     [SerializeField] public AudioSource Audio;
     [SerializeField] public static bool AudioPlaying = true;
     [SerializeField] public bool checkingaudio = true;
+    
     void Start() {
         if (Audio.isPlaying){
             print("audio is on");
         }
     }
+
     void Update() {
         if (!Audio.isPlaying && checkingaudio){
             AudioPlaying = false;

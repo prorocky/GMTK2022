@@ -35,8 +35,7 @@ public class LegMovement : MonoBehaviour
         var moveZStep = movementSpeed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveZStep);
 
-        if(Input.GetKeyDown("q")){
-            print("TEST Q");
+        if(Input.GetKeyDown("q") && !(Time.timeScale == 0)){
             // In middle lane, move left
             if(transform.position.x == middleLaneXPosition){
                 transform.position = Vector3.MoveTowards(transform.position, new Vector3(leftLaneXPosition, transform.position.y, transform.position.z), switchLaneSpeed);
@@ -49,7 +48,7 @@ public class LegMovement : MonoBehaviour
         }
 
         // Switch to Right Lane
-        if(Input.GetKeyDown("e")){
+        if(Input.GetKeyDown("e") && !(Time.timeScale == 0)){
             // In middle lane, move right
             if(transform.position.x == middleLaneXPosition){
                 transform.position = Vector3.MoveTowards(transform.position, new Vector3(rightLaneXPosition, transform.position.y, transform.position.z), switchLaneSpeed);

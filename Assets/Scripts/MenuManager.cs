@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using LootLocker.Requests;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class MenuManager : MonoBehaviour
 {
     [Header("Script Reference To Leaderboard")]
     [SerializeField] public Leaderboard leaderboard;
+    [SerializeField] public TMP_Text highScoreText;
     
     void Awake() {
         Time.timeScale = 1f;
-
     }
 
     void Start() {
@@ -43,8 +44,6 @@ public class MenuManager : MonoBehaviour
         yield return leaderboard.FetchTopHighscoresRoutine();
     }
 
-
-
     public void ObtainRank() {
         StartCoroutine(ObtainingRank());
     }
@@ -53,11 +52,11 @@ public class MenuManager : MonoBehaviour
         yield return leaderboard.WaitRank();
     }
 
-
     public IEnumerator SetupRoutine()
     {
         yield return LoginRoutine();
         yield return leaderboard.FetchTopHighscoresRoutine();
+        leaderboard.PlayerRank();
     }
 
     public IEnumerator LoginRoutine()  //makes sure that we have connection with server
@@ -77,6 +76,4 @@ public class MenuManager : MonoBehaviour
         });
         yield return new WaitWhile(() => done == false);
     }
-
-
 }
