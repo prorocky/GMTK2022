@@ -1249,7 +1249,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 10
   switchLaneSpeed: 5
-  lerpDuration: 5
+  rotateDuration: 1
+  rotationSpeed: 10
   leftLaneXPosition: -4
   middleLaneXPosition: 0
   rightLaneXPosition: 4
@@ -1701,8 +1702,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 10
-  target: {fileID: 795067802}
   smoothSpeed: 0.05
+  target: {fileID: 795067802}
 --- !u!1 &1268815061
 GameObject:
   m_ObjectHideFlags: 0
