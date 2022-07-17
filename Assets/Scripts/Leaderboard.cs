@@ -46,7 +46,7 @@ public class Leaderboard : MonoBehaviour
     public IEnumerator FetchTopHighscoresRoutine()      //grabs names and scores from website
     {
         bool done = false;
-        LootLockerSDKManager.GetScoreListMain(leaderBoardID, 15, 0, (response) =>
+        LootLockerSDKManager.GetScoreList(leaderBoardID, 15, 0, (response) =>
         {
             if(response.success)
             {
@@ -88,7 +88,7 @@ public class Leaderboard : MonoBehaviour
                 Debug.Log("Found Rank");
                 int rank = response.rank;
                 int highestscore = response.score;
-                playersrank.text = "Current rank " + rank.ToString() + "\n" + "Highest Score: " + highestscore;
+                playersrank.text = "Current Rank: " + rank.ToString() + "\n" + "Highest Score: " + highestscore;
                 //movementScript.currentScore.ToString("F0")
             }else{
                 Debug.Log("No rank");
