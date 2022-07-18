@@ -24,10 +24,9 @@ public class ObstacleScript : MonoBehaviour
     {
         audioScriptReference = GameObject.Find("HappyNoise").GetComponent<AudioManager>();
         value = Random.Range(1, 7);
-        print("VALUE:" + value);
         gameManager = GameObject.FindObjectOfType<GameManager>();
         side = GameObject.FindObjectOfType<SideDetection>();
-        GameObject spawnedNumber = Instantiate(numberPrefabs[value - 1], transform.position - obstacleNumberOffset, transform.rotation);
+        GameObject spawnedNumber = Instantiate(numberPrefabs[value - 1], transform.position - obstacleNumberOffset, transform.rotation, transform);
         //spawnedNumber.transform.rotation *= Quaternion.Euler(-90f, 180f, 0f);
     }
 

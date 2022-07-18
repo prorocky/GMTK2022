@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private AudioManager audioManagerScript;
    
     private Vector3 targetPosition;
-    private bool rotating = false;
+    // private bool rotating = false;
     private Quaternion newRotation;
     private Quaternion oldRotation;
 
@@ -59,21 +59,20 @@ public class PlayerMovement : MonoBehaviour
             rotateDuration = 0f;
         }
     }
+    // IEnumerator Rotate(Quaternion shift){
+    //     rotating = true;
+    //     float timeElapsed = 0;
+    //     Quaternion startRotation = transform.rotation;
+    //     Quaternion targetRotation = transform.rotation * shift;
+    //     print("TARGET: " + targetRotation.x);
 
-    IEnumerator Rotate(Quaternion shift){
-        rotating = true;
-        float timeElapsed = 0;
-        Quaternion startRotation = transform.rotation;
-        Quaternion targetRotation = transform.rotation * shift;
-        print("TARGET: " + targetRotation.x);
+    //     while(timeElapsed < rotateDuration){
+    //         transform.rotation = Quaternion.Slerp(startRotation, targetRotation, timeElapsed / rotateDuration );
+    //         timeElapsed += Time.deltaTime;
+    //         yield return null;
+    //     }
 
-        while(timeElapsed < rotateDuration){
-            transform.rotation = Quaternion.Slerp(startRotation, targetRotation, timeElapsed / rotateDuration );
-            timeElapsed += Time.deltaTime;
-            yield return null;
-        }
-
-        transform.rotation = targetRotation;
-        rotating = false;
-    }
+    //     transform.rotation = targetRotation;
+    //     rotating = false;
+    // }
 }

@@ -10,6 +10,7 @@ public class FloorSpawner : MonoBehaviour
     [SerializeField] private int envDieAmountMax = 5;
     [SerializeField] private float envDieXShift = 30f;
     [SerializeField] private float envDieZShift = 50f;
+    [SerializeField] private int tileSpawnLimit = 5;
     [SerializeField] private int[] scaleShiftLimits = new int[] {2, 4};
     [SerializeField] private int[] variationThreshhold;
 
@@ -21,7 +22,8 @@ public class FloorSpawner : MonoBehaviour
     [SerializeField] private GameObject holePrefab;
     [SerializeField] private GameObject obstaclePrefab;
     [SerializeField] private GameObject wallPrefab;
-    // [SerializeField] private GameObject[] numberPrefabs;
+
+    private int numberOfSpawnedTiles = 0;
 
     // Start is called before the first frame update
     void Start() 
@@ -59,9 +61,6 @@ public class FloorSpawner : MonoBehaviour
 
             ObjectScaleChange(envDieSpawn);
             Destroy(envDieSpawn, 15f);
-            // float scaleChangeValue = Random.Range(4, 8);
-            // Vector3 scaleChange = new Vector3 (scaleChangeValue, scaleChangeValue, scaleChangeValue);
-            // envDieSpawn.transform.localScale += scaleChange;
         }
 
         for(int i = 0; i < rightSideDieAmount; i++) {

@@ -19,10 +19,15 @@ public class FloorTile : MonoBehaviour
     {   
         if (col.gameObject.layer == 6) {
             if (gameManager.tileSpawnNo % gameManager.obstacleSpawnFrequency == 0) {
-                floorSpawner.SpawnTile();
+                if (gameManager.tileSpawnNo <= gameManager.tileSpawnLimit) {
+                    floorSpawner.SpawnTile();
+                }
             } else {
-                floorSpawner.SpawnTileNoObstacle();
+                if (gameManager.tileSpawnNo <= gameManager.tileSpawnLimit) {
+                    floorSpawner.SpawnTileNoObstacle();
+                }
             }
+            gameManager.tileSpawnNo--;
             Destroy(gameObject, 3);
         }
     }

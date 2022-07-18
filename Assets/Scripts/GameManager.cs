@@ -16,9 +16,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] public int score;
     [SerializeField] private int health;
     [SerializeField] public int tileSpawnNo;
+    [SerializeField] public int tileSpawnLimit = 8;
     [SerializeField] public int obstacleSpawnFrequency;     // Every x tiles spawn an obstacle/wall
+    [SerializeField] private int moveSpeedScaler = 100;
+    [SerializeField] private int baseMoveSpeed = 10;
+    [SerializeField] private int maxMoveSpeed = 25;
     [SerializeField] TMP_Text Score;
-    [SerializeField] float timer = 0.0f;
     
 
     // Start is called before the first frame update
@@ -35,8 +38,8 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // score += (int)(Time.deltaTime * 100);
         Score.text = "Score: " + score.ToString("F0");
+        print(GetMoveSpeed());
     }
 
     public void LoseHealth() {
@@ -55,9 +58,8 @@ public class GameManager : MonoBehaviour
         gameOverScript.EndGame(score);
     }
 
-    public float SetMoveSpeed() {
-        return Mathf.Min(score / 100 + 1, 10);
-
+    public float GetMoveSpeed() {
+        return Mathf.Min(score / moveSpeedScaler + baseMoveSpeed, maxMoveSpeed);
     }
 
     void IncreaseScore() {

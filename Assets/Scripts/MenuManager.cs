@@ -20,7 +20,7 @@ public class MenuManager : MonoBehaviour
     }
 
     public void StartGame() {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     public void CloseGame() {
@@ -28,11 +28,11 @@ public class MenuManager : MonoBehaviour
     }
 
     public void RestartGame() {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     public void GoToMenu() {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 
     public void UpdateLeaderboards(){

@@ -5,10 +5,10 @@ using UnityEngine;
 public class LegMovement : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] GameManager gameManager;
+    [SerializeField] GameManager gameManagerScript;
     
     [Header("General")]
-    [SerializeField] private float movementSpeed = 1f;
+    [SerializeField] private float movementSpeed = 10f;
     [SerializeField] private float switchLaneSpeed = 1f;
     [SerializeField] private float leftLaneXPosition = -2f;
     [SerializeField] private float middleLaneXPosition = 0f;
@@ -19,19 +19,13 @@ public class LegMovement : MonoBehaviour
     [SerializeField] private AudioSource outAudio;
 
     private Vector3 targetPosition;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
 
         //player's movement
         targetPosition = transform.position - new Vector3(0,0, -100f);
-        var moveZStep = movementSpeed * Time.deltaTime;
+        var moveZStep = gameManagerScript.GetMoveSpeed() * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveZStep);
 
         if(Input.GetKeyDown("q") && !(Time.timeScale == 0)){
