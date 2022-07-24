@@ -13,6 +13,8 @@ public class LegMovement : MonoBehaviour
     [SerializeField] private float leftLaneXPosition = -2f;
     [SerializeField] private float middleLaneXPosition = 0f;
     [SerializeField] private float rightLaneXPosition = 2f;
+    [SerializeField] private bool moveLeft = false;
+    [SerializeField] private bool moveRight = false;
     
     [Header("Audio")]
     [SerializeField] private AudioClip laneChange;
@@ -28,7 +30,10 @@ public class LegMovement : MonoBehaviour
         var moveZStep = gameManagerScript.GetMoveSpeed() * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveZStep);
 
-        if(Input.GetKeyDown("q") && !(Time.timeScale == 0)){
+        // Switch to Left Lane
+        //if(Input.GetKeyDown("q") && !(Time.timeScale == 0)){
+        //if((Input.touches[0].position.x <= Screen.width / 2) && (Input.touches[0].phase == TouchPhase.Began) && !(Time.timeScale == 0)){
+        if(moveLeft && !(Time.timeScale == 0)){
             // In middle lane, move left
             if(transform.position.x == middleLaneXPosition){
                 outAudio.PlayOneShot(laneChange);
@@ -39,11 +44,14 @@ public class LegMovement : MonoBehaviour
             if(transform.position.x == rightLaneXPosition){
                 outAudio.PlayOneShot(laneChange);
                 transform.position = Vector3.MoveTowards(transform.position, new Vector3(middleLaneXPosition, transform.position.y, transform.position.z), switchLaneSpeed);
-            }          
+            }       
+            moveLeft = false;   
         }
 
         // Switch to Right Lane
-        if(Input.GetKeyDown("e") && !(Time.timeScale == 0)){
+        // if(Input.GetKeyDown("e") && !(Time.timeScale == 0)){
+        //if((Input.touches[0].position.x > Screen.width / 2) && (Input.touches[0].phase == TouchPhase.Began) && !(Time.timeScale == 0)){
+        if(moveRight && !(Time.timeScale == 0)){
             // In middle lane, move right
             if(transform.position.x == middleLaneXPosition){
                 outAudio.PlayOneShot(laneChange);
@@ -55,6 +63,15 @@ public class LegMovement : MonoBehaviour
                 outAudio.PlayOneShot(laneChange);
                 transform.position = Vector3.MoveTowards(transform.position, new Vector3(middleLaneXPosition, transform.position.y, transform.position.z), switchLaneSpeed);
             }          
+            moveRight = false;
         }
+    }
+
+    public void ButtonToMoveLeft(){
+        moveLeft = true;
+    }
+
+    public void ButtonToMoveRight(){
+        moveRight = true;
     }
 }
