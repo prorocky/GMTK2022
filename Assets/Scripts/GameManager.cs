@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         Score.text = "Score: " + score.ToString("F0");
-        print(GetMoveSpeed());
+        // print(GetMoveSpeed());
     }
 
     public void LoseHealth() {

@@ -28,7 +28,7 @@ public class LegMovement : MonoBehaviour
         var moveZStep = gameManagerScript.GetMoveSpeed() * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveZStep);
 
-        if(Input.GetKeyDown("q") && !(Time.timeScale == 0)){
+        if((Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.Z)) && !(Time.timeScale == 0)){
             // In middle lane, move left
             if(transform.position.x == middleLaneXPosition){
                 outAudio.PlayOneShot(laneChange);
@@ -43,7 +43,7 @@ public class LegMovement : MonoBehaviour
         }
 
         // Switch to Right Lane
-        if(Input.GetKeyDown("e") && !(Time.timeScale == 0)){
+        if((Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.X)) && !(Time.timeScale == 0)){
             // In middle lane, move right
             if(transform.position.x == middleLaneXPosition){
                 outAudio.PlayOneShot(laneChange);

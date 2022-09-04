@@ -24,6 +24,7 @@ public class MenuManager : MonoBehaviour
     }
 
     public void CloseGame() {
+        print("closing game");
         Application.Quit();
     }
 

@@ -38,15 +38,15 @@ public class PlayerMovement : MonoBehaviour
     void UpdateRotationState(){
         // Get the rotation, if any
         float x = 0f, y = 0f;
-        if (Input.GetKeyDown(KeyCode.W)) {
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
             x = 90f;
-        } else if (Input.GetKeyDown(KeyCode.S)) {
+        } else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
             x = -90f;
         }
 
-        if (Input.GetKeyDown(KeyCode.A)) {
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) {
             y = 90f;
-        } else if (Input.GetKeyDown(KeyCode.D)) {
+        } else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) {
             y = -90f;
         }
 
