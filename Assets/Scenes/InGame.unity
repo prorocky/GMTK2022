@@ -4636,6 +4636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leaderboard: {fileID: 1874871586}
   playerNameInputField: {fileID: 8871844}
+  lengthofName: 10
 --- !u!1 &1901652870
 GameObject:
   m_ObjectHideFlags: 0

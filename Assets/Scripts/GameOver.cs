@@ -18,6 +18,7 @@ public class GameOver : MonoBehaviour
         StartCoroutine(SubmitScore(score));
         youScored.text = "You Scored: " + score.ToString("F0");
         displayScore.SetActive(true);
+        
         inputName.SetActive(true);
         continueButton.SetActive(true);
         Time.timeScale = 0;     //pause game

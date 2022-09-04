@@ -15,6 +15,8 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] public Leaderboard leaderboard;
     [Header("Custom Name InputField")]
     [SerializeField] public TMP_InputField playerNameInputField;
+    [Header("Length of Input Name")]
+    public int lengthofName = 10;
 
 
     // Start is called before the first frame update
@@ -36,6 +38,7 @@ public class PlayerManager : MonoBehaviour
 
     public IEnumerator SetupRoutine()
     {
+        playerNameInputField.characterLimit = lengthofName;
         yield return LoginRoutine();
         yield return leaderboard.FetchTopHighscoresRoutine();
     }
