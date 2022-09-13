@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
+
 public class InGameAudio : MonoBehaviour
 {
     [Header("AudioSource")]
     [SerializeField] public AudioSource audio;
-    [SerializeField] private GameObject audioOnIcon;
-    [SerializeField] private GameObject audioOffIcon;
+    [SerializeField] public GameObject PauseScreen;
+    [SerializeField] TextMeshProUGUI countDown;
+
+    //[SerializeField] Slider volumeSlider;
     // Update is called once per frame
     void Awake()
     {
@@ -16,27 +21,36 @@ public class InGameAudio : MonoBehaviour
                 audio.volume = 0f;
             }
         }
-
-        if (audio.volume > 0) {
-            audioOnIcon.SetActive(true);
-            audioOffIcon.SetActive(false);
-        }else {
-            audioOnIcon.SetActive(false);
-            audioOffIcon.SetActive(true);
-        }
     }
 
     void Update() {
         if (Input.GetKeyDown(KeyCode.M)) {
-            if (audio.volume > 0) {
-                audio.volume = 0;
-                audioOnIcon.SetActive(false);
-                audioOffIcon.SetActive(true);
-            }else {
-                audio.volume = 0.12f;
-                audioOnIcon.SetActive(true);
-                audioOffIcon.SetActive(false);
-            }
+            PauseScreen.SetActive(true);
+            PauseGame();
         }
     }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+    }
+
+    public void ResumeGame()
+    {
+        countDown.enabled = true;
+        StartCoroutine(CountDown());
+        
+    }
+
+    IEnumerator CountDown() {
+        countDown.text = "3";
+        yield return StartCoroutine(CoroutineUtilities.WaitForRealTime(1));
+        countDown.text = "2";
+        yield return StartCoroutine(CoroutineUtilities.WaitForRealTime(1));
+        countDown.text = "1";
+        yield return StartCoroutine(CoroutineUtilities.WaitForRealTime(1));
+        Time.timeScale = 1;
+        countDown.enabled = false;
+    }
+
 }
